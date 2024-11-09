@@ -52,9 +52,9 @@ const sessionOptions = {
   },
 };
 
-// app.get("/", async (req, res) => {
-//   res.send("Root is Working");
-// });
+app.get("/", async (req, res) => {
+  res.redirect("/listings");
+});
 
 app.use(session(sessionOptions));
 app.use(flash());
