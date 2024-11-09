@@ -78,6 +78,10 @@ body{
     padding: 0 !important;
 }
 
+.card-text b{
+    font-size: 1.1rem;
+}
+
 .card-text p{
     font-weight: 400 !important;
 }
