@@ -1,2 +1,2 @@
 # Renture
-Renture is a full stack project ade for Technopia 2.0
+Renture is a full stack project made for Technopia 2.0
