@@ -25,6 +25,19 @@ body{
     background: #fe424d; 
   }
 
+  .logo{
+    font-size: 1.5rem !important;
+  }
+
+  .list{
+    font-size: 1.1rem !important;
+    margin-right: 1.5rem !important;
+  }
+
+  .checkout{
+    display: flex;
+    justify-content: center;
+  }
 
 .container{
     /* margin: 0 10rem 0 10rem !important; */
@@ -58,7 +71,7 @@ body{
     display:grid;
     position: relative;
     grid-area: footer;
-    margin-top: 10rem;
+    margin-top: 15rem;
   margin-left: 0.08rem;
     min-height:10rem;
     .bubbles {

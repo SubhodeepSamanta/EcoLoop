@@ -90,9 +90,6 @@ app.listen(8080, () => {
 });
 
 app.use("/listings", listingsRouter);
-app.get("/listings/testid/rent", (req, res) => {
-  res.send("Rent route is working!");
-});
 
 app.use("/listings/:id/rent", rentRouter);
 app.use("/listings/:id/reviews", reviewsRouter);
