@@ -116,3 +116,16 @@ body{
     padding-left: 0;
     padding-right: 0;
 }
+
+/* rent button */
+.rent-btn{
+    background-color: #fe424d !important;
+    border: none !important;
+    width: 10rem !important;
+    height: 2.5rem !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center;
+    font-size: 1.1rem !important;
+    border-radius: 25px !important;
+}
