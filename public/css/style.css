@@ -230,3 +230,20 @@ body{
     font-size: 1.1rem !important;
     border-radius: 25px !important;
 }
+
+#revbox{
+    height: 10rem;
+    border: none;
+    box-shadow: 2px 2px 2px 2px rgb(213, 209, 209);
+
+}
+.card-title{
+    margin-top: 0.4rem;
+    font-size:large;
+    font-weight: bold;
+}
+#revbox:hover{
+
+    opacity: 0.8;
+     
+}
