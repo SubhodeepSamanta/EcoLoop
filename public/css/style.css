@@ -3,7 +3,29 @@ body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    overflow-x: hidden;
 }
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+   
+    border-radius: 10px;
+  }
+   
+  ::-webkit-scrollbar-thumb {
+    background: #fe424d; 
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #fe424d; 
+  }
+
+
 .container{
     /* margin: 0 10rem 0 10rem !important; */
     flex: 1;
@@ -30,36 +52,102 @@ body{
     text-decoration: underline;
 }
 
+.footer {
+    z-index: 1;
+    --footer-background:#fe424d;
+    display:grid;
+    position: relative;
+    grid-area: footer;
+    margin-top: 10rem;
+  margin-left: 0.08rem;
+    min-height:10rem;
+    .bubbles {
+        position: absolute;
+        top:0;
+        left:0;
+        right:0;
+        height:1rem;
+        background:var(--footer-background);
+        filter:url("#blob");
+        .bubble {
+            position: absolute;
+            left:var(--position, 50%);
+            background:var(--footer-background);
+            border-radius:100%;
+            animation:bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s),
+                bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
+            transform:translate(-50%, 100%);
+        }
+    }
 
-.f-info-links, .f-info-socials,.f-info-brand{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+    .content {
+        z-index: 2;
+        display:grid;
+        grid-template-columns: 1fr auto;
+        grid-gap: 4rem;
+        padding:2rem;
+        background:var(--footer-background);
+        a, p {
+            color:#F5F7FA;
+            text-decoration:none;
+        }
+        b {
+            color:white;
+        }
+        p {
+            margin:0;
+            font-size:.75rem;
+        }
+        >div {
+            display:flex;
+            flex-direction:column;
+            justify-content: center;
+            >div {
+                margin:0.25rem 0;
+                >* {
+                    margin-right:.5rem;
+                }
+            }
+            .image {
+                align-self: center;
+                width:4rem;
+                height:4rem;
+                margin:0.25rem 0;
+                background-size: cover;
+                background-position: center;
+            }
+        }
+    }
 }
 
+.icons{
+    margin: 1rem 1rem 1rem 1rem;
+    
+}
+#icon{
+    margin: 1rem 1rem;
+    font-size: 25px;
+    color: #ebebeb;
+}
+@keyframes bubble-size {
+0%, 75% {
+    width:var(--size, 4rem);
+    height:var(--size, 4rem);
+}
+100% {
+    width:0rem;
+    height:0rem;
+}
+}
+@keyframes bubble-move {
+0% {
+    bottom:-4rem;
+}
+100% {
+    bottom:var(--distance, 10rem);
+}
+}
 
-.f-info-socials i{
-    font-size: 1.2rem;
-    margin: 0 1rem;
-}
-.f-info-links a{
-    text-decoration: none;
-    color: #222222;
-}
-.f-info-links a:hover{
-    text-decoration: underline;
-}
-.f-info{
-    display: flex;
-    text-align: center;
-    height: 8rem;
-    background-color: #ebebeb;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: space-evenly;
-}
 
 /* Cards */
 

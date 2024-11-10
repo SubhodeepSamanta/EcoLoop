@@ -1,14 +1,63 @@
 <footer>
-    <div class="f-info">
-        <div class="f-info-socials">
-            <i class="fa-brands fa-square-facebook"></i>
-            <i class="fa-brands fa-square-instagram"></i>
-            <i class="fa-brands fa-linkedin"></i>
+   
+    <div class="main">
+        <div class="footer">
+          <div class="bubbles">
+            <% for (var i = 0; i < 128; i++) { %> <!-- Small numbers look nice too -->
+              <div class="bubble" style="--size:<%= 2 + Math.random() * 4 %>rem; --distance:<%= 6 + Math.random() * 4 %>rem; --position:<%= -5 + Math.random() * 110 %>%; --time:<%= 2 + Math.random() * 2 %>s; --delay:<%= -1 * (2 + Math.random() * 2) %>s;"></div>
+            <% } %>
+          </div>
+          <div class="content">
+            <div>
+              <div>
+                <b>About</b>
+                <a href="#">Contact Us</a>
+                <a href="#">About Us</a>
+                <a href="#">Careers</a>
+                <a href="#">Renture</a>
+                <a href="#">Information</a>
+              </div>
+              <div>
+                <b>Help</b>
+                <a href="#">Payments</a>
+                <a href="#">Shipping</a>
+                <a href="#">Cancellation & Return</a>
+                <a href="#">FAQ</a>
+              </div>
+              <div>
+                <b>Consumer policy</b>
+                <a href="#">Returns</a>
+                <a href="#">Terms of use</a>
+                <a href="#">Security</a>
+                <a href="#">Privacy</a>
+                <a href="#">Site Map</a>
+                <a href="#">EPR Compilence</a>
+              </div>
+              <div>
+                <b>Mail us :</b>
+                <a href="#">Renture private limited</a>
+                <a href="#">DIT University</a>
+                <a href="#">Dehradune</a>
+               
+              </div>
+            </div>
+            <div class="icons">
+                <i id="icon" class="fa-brands fa-instagram"></i>
+                <i id="icon" class="fa-brands fa-facebook"></i>
+                <i id="icon" class="fa-brands fa-linkedin"></i>
+            </div>
+         
+          </div>
         </div>
-        <div class="f-info-brand">&copy; Celeste Private Limited</div>
-        <div class="f-info-links">
-            <a href="/privacy">Privacy</a>
-            <a href="/terms">Terms</a>
-        </div>
-    </div>
+        <svg style="position:fixed; top:100vh">
+          <defs>
+            <filter id="blob">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"/>
+              <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="blob"/>
+            </filter>
+          </defs>
+        </svg>
+      </div>
+      
+
 </footer>
