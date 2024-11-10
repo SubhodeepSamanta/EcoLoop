@@ -20,14 +20,18 @@
     <br>
 
     <%if(currUser&&!(currUser._id.equals(listing.owner._id))){%>
-    <div class="btns mb-3">
-    <a href="/listings/<%=listing._id%>/edit" class="btn btn-dark col-1 offset-3 rent-btn">Rent</a>
-    </div>
+        <div class="btns mb-3">
+            <form  class="offset-3" method="GET" action="/listings/<%=listing._id%>/rent">
+                <button class="btn btn-dark rent-btn">Rent</button>
+            </form>
+        </div>
     <%}%>
     
     <%if(!currUser){%>
     <div class="btns mb-3">
-    <a href="#" class="btn btn-dark col-1 offset-3 rent-btn" disabled>Rent</a>
+    <form  class="offset-3" method="GET" action="#">
+        <button class="btn btn-dark rent-btn" disabled>Rent</button>
+    </form>
     </div>
     <%}%>
     
