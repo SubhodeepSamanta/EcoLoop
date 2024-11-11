@@ -4,12 +4,15 @@
         <div class="col-8">
     <h3 class="mt-5">Rent Your Dream</h3>
     <!-- <form method="POST" action="/listings" enctype="multipart/form-data"> -->
-        <form>
+        <div>
         <div class="mb-3 mt-3 name"><label for="title" class="form-label">Your Name:</label>
         <input type="text" name="listing[title]" value="<%=user.username%>" class="form-control" ></div>
 
         <div class="mb-3 mt-3 address"><label for="description" class="form-label">Address:</label>
         <textarea name="listing[description]" placeholder="Enter your Address" class="form-control" ></textarea></div>
+
+        <div class="mb-3 mt-3 address"><label for="description" class="form-label">From When to When do you want to rent the product</label>
+        <textarea name="listing[description]" placeholder="Enter Date" class="form-control" ></textarea></div>
 
         <div class="row">
         <div class="mb-3  mt-3 col-md-5"><label for="price" class="form-label">Postal Code</label>
@@ -17,12 +20,11 @@
 
         <div class="mb-3  mt-3 col-md-7"><label for="country" class="form-label">Enter City</label>
         <input type="text" name="listing[country]" placeholder="Dehradun" class="form-control" ></div>
-        </div>
-        
-        <div class="mb-3 mt-3"><label for="location" class="form-label">State</label>
-            <input type="text" name="listing[location]" placeholder="Enter Your State" class="form-control" ></div>
-            <button class="btn btn-dark add-btn mt-3 checkout">Proceed To Checkout</button>
-        </div>
+        </div></div>
+    <div>
+    </div>
+    <form action="/checkout" method="post" >
+        <input type="submit" value="Proceed to Checkout" class="btn btn-dark add-btn mt-3 checkout">
     </form>
     </div>
     </div>

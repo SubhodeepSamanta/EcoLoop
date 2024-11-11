@@ -81,6 +81,7 @@
                 </div>
             </div>
             </div>
+            <div id="custom-cursor"></div>
             <ul>
                 <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-3">
                     <%for(let listing of allListings){%>
@@ -130,5 +131,20 @@
                 }
             }
         });
+
+        document.addEventListener("mousemove", (e) => {
+    const cursor = document.getElementById("custom-cursor");
+    cursor.style.left = `${e.pageX}px`;
+    cursor.style.top = `${e.pageY}px`;
+  });
+
+  document.querySelectorAll("a, button").forEach(element => {
+  element.addEventListener("mouseover", () => {
+    document.getElementById("custom-cursor").style.transform = "scale(2.5)";
+  });
+  element.addEventListener("mouseleave", () => {
+    document.getElementById("custom-cursor").style.transform = "scale(1.5)";
+  });
+});
 
     </script>
