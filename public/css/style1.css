@@ -398,3 +398,7 @@ body{
 .textdeco{
     text-decoration: none !important;
 }
+
+.textdeco{
+    color: #222222;
+}

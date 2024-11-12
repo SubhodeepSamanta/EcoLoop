@@ -20,6 +20,7 @@ router
   
 //New Route
 router.get("/new", isLoggedIn, wrapAsync(listingController.renderNewForm));
+router.get("/handbags", isLoggedIn, wrapAsync(listingController.handbags));
 
 router
   .route("/:id")
