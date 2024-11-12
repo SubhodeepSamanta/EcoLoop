@@ -34,13 +34,13 @@
 
             <div class="navbar-nav ms-auto">
                 <form class="d-flex" role="search">
-                    <input id="searchinout" class="form-control me-2 search-input" type="search" placeholder="Search Your Desire" aria-label="Search">
-                    <button id="searchbutton" class="btn search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
+                    <input class="form-control me-2 search-input" type="search" placeholder="Search Your Desire" aria-label="Search">
+                    <button class="btn search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
                   </form>
             </div>
 
             <div class="navbar-nav ms-auto">
-                <a class="nav-link" href="/listings/new">ListYourItems
+                <a class="nav-link" href="/blogs/new">Make Your Own Blog
                 </a>
                 <%if(!currUser){%>
                 <a class="nav-link" href="/signup"><b>SignUp</b></a>
@@ -54,26 +54,3 @@
     </div>
     </nav>
 </nav>
-
-
-<script>
-    document.getElementById('searchbutton').addEventListener('click', (event) => {
-    event.preventDefault(); // Prevent default form submission behavior
-
-    const searchQuery = document.getElementById('searchinout').value.trim().toLowerCase();
-
-    if (searchQuery === 'buy' || searchQuery === 'rent' || searchQuery === 'sell' || searchQuery === 'donate') {
-        window.location.href = '/listings';
-    } else if (searchQuery === 'blogs' || searchQuery==='blog') {
-        window.location.href = '/blogs';
-    } else if (searchQuery === 'tutorial' || searchQuery==='tutorialvideo' || searchQuery==='tutorialvideos' || searchQuery==='tutorial video' || searchQuery==='tutorial videos') {
-        window.location.href = '/blogs/tutorial';
-    } else if (searchQuery === 'home' || searchQuery==='main' || searchQuery==='mainpage') {
-        window.location.href = '/landings';
-    } else {
-        alert('Search term not recognized. Please try again.');
-    }
-});
-
-
-</script>

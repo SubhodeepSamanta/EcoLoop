@@ -17,3 +17,9 @@ module.exports.reviewSchema = Joi.object({
     comment: Joi.string().required(),
   }).required(),
 });
+
+module.exports.blogSchema = Joi.object({
+    title: Joi.string().required(),
+    summary: Joi.string().required(),
+    description: Joi.string().required(),
+});

@@ -12,6 +12,15 @@ const upload = multer({ storage });
 router
   .route("/")
   .get(wrapAsync(blogsController.index)) //Index Route
-  
- 
+
+  router.get("/new", isLoggedIn, wrapAsync(blogsController.createListing));
+  router.get("/idfirst", isLoggedIn, wrapAsync(blogsController.load));
+  router.get("/idfifth", isLoggedIn, wrapAsync(blogsController.load2));
+  router.get("/tutorial", isLoggedIn, wrapAsync(blogsController.tutorial));
+  router.get("/tutorial/video", isLoggedIn, wrapAsync(blogsController.video));
+  router.post("/new",isLoggedIn,
+    validateListing,upload.single("listing[image]"),
+    wrapAsync(blogsController.create)
+  );
+
 module.exports = router;

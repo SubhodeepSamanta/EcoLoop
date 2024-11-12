@@ -4,8 +4,12 @@ body{
     flex-direction: column;
     min-height: 100vh;
     overflow-x: hidden;
-    cursor: none;
   
+}
+
+.blogslink{
+    color: #222222 !important;
+    text-decoration: none !important;
 }
 
 /* width */
@@ -215,7 +219,7 @@ body{
 }
 
 .add-btn, .edit-btn{
-    background-color: #fe424d !important;
+    background-color:#307834 !important;
     border: none !important;
 }
 
@@ -274,9 +278,123 @@ body{
 }
 
 .own i {
+    color: #222222;
     font-size: 28px;
    margin-top: 17px;
 }
 #boxa{
+    height: 14rem;
+    width:100%;
     border-radius: 20px;
+}
+
+
+/* blogs */
+
+.red{
+    margin-top:3rem;
+    background-color: red;
+    height: 17rem;
+    border-radius: 2rem;
+}
+
+.red img{
+    border-radius: 2rem 0 0 2rem !important;
+    height: 17rem !important;
+}
+
+.red:hover{
+    scale: 1.02;
+    transition-duration: 4;
+}
+
+.summa{
+    display: inline-block;
+    margin-bottom: 10rem;
+}
+
+.cardhead{
+    font-size: 2rem !important;
+}
+
+#editor{
+    min-height: 20rem !important;
+}
+
+.blo{
+    margin-left: 2rem !important;
+}
+.summ{
+    margin-top: 2rem !important;
+}
+.nodeco{
+    text-decoration: none !important;
+}
+
+.desc{
+    width: 70%;
+}
+
+.descimg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.descp{
+    margin-left: 4rem;
+    margin-top: 2rem;
+    border: 1px solid black;
+    padding: 2rem;
+    border-radius: 2rem;
+}
+
+.pd-3{
+    padding: 1rem;
+}
+.video {
+    display: block;
+    margin: 0 auto; /* Centers the video */
+    
+}
+.video iframe{
+    width: 50%;
+    height: 500px;
+    display: block;
+    margin: 0 auto; /* Centers the video */
+    border: 2px solid #000;
+    width: 100%;
+}
+
+.video1 {
+    display: block;
+    margin: 0 auto; /* Centers the video */
+    
+}
+.video1 iframe{
+    width: 50%;
+    height: 740px;
+    display: block;
+    margin: 0 auto; /* Centers the video */
+    border: 2px solid #000;
+    width: 100%;
+}
+
+.quotefirst{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.displaynone{
+    display: none !important;
+}
+
+.textandcolor{
+    color: #222222;
+    text-decoration: none;
+}
+
+.textdeco{
+    text-decoration: none !important;
 }

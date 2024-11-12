@@ -1,0 +1,123 @@
+<% layout("/layouts/boilerplate1")%>
+<style>
+.container {
+    display: inline;
+}
+
+body.light-mode {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+button {
+    padding: 7px 15px;
+    margin-top: 20px;
+    margin-left: 2rem;
+    cursor: pointer;
+    border: none;
+    background-color: #444;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #333;
+}
+
+</style>
+<body>
+    <div class="video1">
+     
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/es4x5R-rV9s?si=eRmHuuc4VPeIg_Ki" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div>
+        <h4 class="mt-4 mb-5"> <b>Sustainable Shopping: How to Make Environmentally Smart Choices</b><button id="darkModeToggle"><i class="fa-solid fa-sun"></i></button> </h4>
+
+    </div>
+    <div class="mt-3">
+        <h5>Description</h5>
+        <p>Explore how to make informed, eco-conscious choices while shopping. This video breaks down what to look for in sustainable brands and how your purchasing habits can contribute to a healthier planet.Learn how your purchasing habits can contribute to a healthier planet by supporting companies that prioritize environmental and social responsibility. Whether you're shopping for clothes, food, or household items, discover practical tips for making more sustainable choices that align with your values.</p>
+    </div>
+    <hr class=" mt-5 mb-6">
+     <b>There are No comments for this video yet.</b>
+    <hr><br><br>
+    <h5 class="mb-2">Reccomendations</h5>
+    <hr><br>
+    <div  class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-3">
+        <a href="/blogs/tutorial/video" class="listing-link">
+            <div class="card col listing-card" style="width: 20rem">
+                <img  id="boxa" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLI4dIIFLIbkuvwH82pNZinB25kTARSU-WLL2vlFiUljhvw6TIskKe-kp0pxsCxjvJqEA&usqp=CAU">
+                <div class="card-img-overlay"></div>
+                <div class="card-body mt-3">
+                    <p class="card-text">
+                        <b>
+                            "Zero Waste 101: Beginners Guide to Reducing Your Household Waste"
+                        </b> <br> <small>456 views</small><br>
+                        <p>  Dive into the essentials of a zero-waste lifestyle with this beginner-friendly guide.</p>
+                    </p>
+                </div>
+            </div>
+        </a>
+        <a href="/blogs/tutorial/video" class="listing-link">
+            <div class="card col listing-card" style="width: 20rem">
+                <img  id="boxa" src="https://i.pinimg.com/474x/f0/c6/c1/f0c6c1105c45cb6b6862aa09f49512f7.jpg">
+                <div class="card-img-overlay"></div>
+                <div class="card-body mt-3">
+                    <p class="card-text">
+                        <b>
+                            "Top 5 DIY Projects for a More Sustainable Home" 
+                        </b><br> <small>752 views</small><br>
+                        <p>  Get hands-on with these five eco-friendly DIY projects that will help you live more sustainably.</p>
+                    </p>
+                </div>
+            </div>
+        </a>
+        <a href="/blogs/tutorial/video" class="listing-link">
+            <div class="card col listing-card cardcolor" style="width: 20rem">
+                <img  id="boxa" src="https://img.freepik.com/premium-photo/photo-realistic-green-leaf-with-recycling-arrows-icon-eco-friendly-practices-sustainability-co_980716-176541.jpg">
+                <div class="card-img-overlay"></div>
+                <div class="card-body mt-3">
+                    <p class="card-text">
+                        <b>
+                            "The Future of Green Technology: Innovations You Should Know" 
+                        </b> <br> <small>12.4k views</small><br>
+                        <p>  Take a closer look at the latest advancements in green technology that are changing the world.</p>
+                    </p>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+</body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const toggleButton = document.getElementById('darkModeToggle');
+    const body = document.body;
+
+    // Check if dark mode is already saved in localStorage
+    if (localStorage.getItem('darkMode') === 'enabled') {
+        body.classList.add('dark-mode');
+    } else {
+        body.classList.add('light-mode');
+    }
+
+    toggleButton.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        body.classList.toggle('light-mode');
+
+        // Save the mode in localStorage
+        if (body.classList.contains('dark-mode')) {
+            localStorage.setItem('darkMode', 'enabled');
+        } else {
+            localStorage.setItem('darkMode', 'disabled');
+        }
+    });
+});
+
+</script>

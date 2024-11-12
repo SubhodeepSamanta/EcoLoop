@@ -1,0 +1,39 @@
+<% layout("/layouts/boilerblog")%>
+<body>
+    
+    <div class="row">
+        <div class="col-8">
+    <h3 class="mt-4">Make Your Own Blog</h3>
+    <form method="GET" action="/blogs/idfifth" enctype="multipart/form-data">
+        <div class="mb-3 mt-3"><label for="title" class="form-label">Title</label>
+        <input type="text" name="blogs[title]" placeholder="Enter Title" class="form-control" required></div>
+
+        <div class="mb-3 mt-3"><label for="description" class="form-label">Summary</label>
+        <textarea name="blogs[description]" placeholder="Summary for your Blog" class="form-control" required></textarea></div>
+
+
+        <div id="editor">
+            <textarea name="blogs[description]" placeholder="Summary for your Blog" class="form-control" required>
+        </textarea>
+        </div>
+
+
+<!--         
+    <div class="mb-3 mt-3"><label for="image" class="form-label">Image Link</label>
+        <input type="text" name="listing[image]" placeholder="Enter URL/Link for Image" class="form-control"></div>
+        -->
+        <div class="mb-3 mt-3"><label for="image" class="form-label">Upload Blog Image</label>
+            <input type="file" name="listing[image]" class="form-control" required></div>
+            <button class="btn btn-dark add-btn mt-3">Make A Change</button>
+    </form>
+    </form>
+    </div>
+    </div>
+        
+</body>
+
+<script>
+    const quill = new Quill('#editor', {
+      theme: 'snow'
+    });
+  </script>

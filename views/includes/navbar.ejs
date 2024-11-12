@@ -34,8 +34,10 @@
 
             <div class="navbar-nav ms-auto">
                 <form class="d-flex" role="search">
-                    <input class="form-control me-2 search-input" type="search" placeholder="Search things to rent" aria-label="Search">
-                    <button class="btn search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
+                    <input id="searchinout" class="form-control me-2 search-input" type="search" placeholder="Search things to rent" aria-label="Search">
+                    <button id="searchbutton" class="btn search-btn" type="button"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
+
+
                   </form>
             </div>
 
@@ -53,3 +55,23 @@
     </div>
     </nav>
 </nav>
+
+<script>
+    document.getElementById('searchbutton').addEventListener('click', (event) => {
+    event.preventDefault(); // Prevent default form submission behavior
+
+    const searchQuery = document.getElementById('searchinout').value.trim().toLowerCase();
+
+    if (searchQuery === 'buy' || searchQuery === 'rent' || searchQuery === 'sell' || searchQuery === 'donate') {
+        window.location.href = '/listings';
+    } else if (searchQuery === 'blogs') {
+        window.location.href = '/blogs';
+    } else if (searchQuery === 'tutorial') {
+        window.location.href = '/tutorial';
+    } else {
+        alert('Search term not recognized. Please try again.');
+    }
+});
+
+
+</script>

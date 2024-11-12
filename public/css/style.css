@@ -64,10 +64,7 @@ body{
 .filter{
     font-size: 0.9rem;
 }
-.fa-basket-shopping{
-    color: #fe424d;
-    font-size: 2rem;
-}
+
 
 .nav-link{
     color: #222222 !important;
@@ -217,7 +214,7 @@ body{
 }
 
 .add-btn, .edit-btn{
-    background-color: #fe424d !important;
+    background-color: #307834 !important;
     border: none !important;
 }
 
@@ -233,7 +230,7 @@ body{
 
 /* rent button */
 .rent-btn{
-    background-color: #fe424d !important;
+    background-color: #307834 !important;
     border: none !important;
     width: 10rem !important;
     height: 2.5rem !important;
