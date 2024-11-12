@@ -9,6 +9,9 @@ const methodOverride = require("method-override");
 const ejsMate = require("ejs-mate");
 const ExpressError = require("./utils/ExpressError.js");
 const listingsRouter = require("./routes/listing.js");
+const landingsRouter = require("./routes/landing.js");
+const blogsRouter = require("./routes/blogs.js");
+
 const reviewsRouter = require("./routes/review.js");
 const userRouter = require("./routes/user.js");
 const rentRouter = require("./routes/rent.js");
@@ -54,7 +57,7 @@ const sessionOptions = {
 };
 
 app.get("/", async (req, res) => {
-  res.redirect("/listings");
+  res.redirect("/landings");
 });
 
 
@@ -137,6 +140,8 @@ app.listen(8080, () => {
 });
 
 app.use("/listings", listingsRouter);
+app.use("/landings", landingsRouter);
+app.use("/blogs", blogsRouter);
 
 app.use("/listings/:id/rent", rentRouter);
 app.use("/listings/:id/reviews", reviewsRouter);

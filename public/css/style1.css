@@ -4,58 +4,46 @@ body{
     flex-direction: column;
     min-height: 100vh;
     overflow-x: hidden;
+    cursor: none;
+  
 }
 
-/* Scrollbar */
+/* width */
 ::-webkit-scrollbar {
     width: 10px;
   }
   
+  /* Track */
   ::-webkit-scrollbar-track {
    
     border-radius: 10px;
   }
    
+  /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: #fe424d; 
+    background: #4da847; 
     border-radius: 10px;
   }
   
+  /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: #fe424d; 
+    background: #4da847; 
   }
-
-  .logo{
-    font-size: 1.5rem !important;
-  }
-
-  .list{
-    font-size: 1.1rem !important;
-    margin-right: 1.5rem !important;
-  }
-
-  .checkout{
-    display: flex;
-    justify-content: center;
-  }
-
-  #custom-cursor {
+.container{
+    /* margin: 0 10rem 0 10rem !important; */
+    flex: 1;
+}
+#custom-cursor {
     position: absolute;
     width: 40px;
     height: 40px;
-  background-color: #fe424d;
+  background-color: #4da847;
   opacity: 0.5;
     border-radius: 50%;
     pointer-events: none;
     transform: translate(-50%, -50%);
     transition: width 0.1s ease, height 0.1s ease;
   }
-
-.container{
-    /* margin: 0 10rem 0 10rem !important; */
-    flex: 1;
-}
-
 .navbar{
     background-color: white;
     height: 5rem;
@@ -64,8 +52,8 @@ body{
 .filter{
     font-size: 0.9rem;
 }
-.fa-basket-shopping{
-    color: #fe424d;
+.fa-store{
+    color: #4da847;
     font-size: 2rem;
 }
 
@@ -78,12 +66,13 @@ body{
 }
 
 .footer {
+    cursor: pointer;
     z-index: 1;
-    --footer-background:#fe424d;
+    --footer-background: #4da847;
     display:grid;
     position: relative;
     grid-area: footer;
-    margin-top: 15rem;
+    margin-top: 10rem;
   margin-left: 0.08rem;
     min-height:10rem;
     .bubbles {
@@ -147,8 +136,7 @@ body{
 
 .icons{
     margin: 1rem 1rem 1rem 1rem;
-    cursor: pointer;
-
+    
 }
 #icon{
     margin: 1rem 1rem;
@@ -174,7 +162,17 @@ body{
 }
 }
 
+#daba{
+    
 
+    font-size: large;
+   font-weight: 70px !important; 
+   border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+  
 /* Cards */
 
 .listing-card{
@@ -230,21 +228,8 @@ body{
     padding-left: 0;
     padding-right: 0;
 }
-
-/* rent button */
-.rent-btn{
-    background-color: #fe424d !important;
-    border: none !important;
-    width: 10rem !important;
-    height: 2.5rem !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center;
-    font-size: 1.1rem !important;
-    border-radius: 25px !important;
-}
-
 #revbox{
+    width: 28rem;
     height: 10rem;
     border: none;
     box-shadow: 2px 2px 2px 2px rgb(213, 209, 209);
@@ -259,4 +244,39 @@ body{
 
     opacity: 0.8;
      
+}
+.head{
+    margin-top: 15px;
+    font-weight: 300;
+  cursor: pointer;
+  font-style: initial;
+  
+}
+.texts{
+    font-weight: 700;
+    cursor: pointer;
+    font-style: initial;
+    color: #222222;
+    text-decoration: none !important;
+   
+  
+}
+.texts:hover{
+    text-decoration: underline;
+    opacity: 0.5;
+    color: #222222;
+}
+.newblog{
+    display: flex;
+    justify-content: space-between;
+    width: 10rem;
+    cursor: pointer;
+}
+
+.own i {
+    font-size: 28px;
+   margin-top: 17px;
+}
+#boxa{
+    border-radius: 20px;
 }

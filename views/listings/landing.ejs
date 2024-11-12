@@ -1,0 +1,180 @@
+<% layout("/layouts/boilerplate1")%>
+
+
+<body>
+    <style>
+        #filters {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-evenly;
+
+        }
+
+        .filter {
+            text-align: center;
+            margin-right: 2rem;
+            margin-top: 2rem;
+            opacity: 0.7;
+            font-size: large;
+            
+        }
+
+        .filter:hover {
+            opacity: 1;
+            cursor: pointer;
+           font-weight: bold;
+        }
+        .tax-info {
+            display: none;
+        }
+        .tax-toggle{
+            border: 1px solid black ;
+            border-radius: 0.5rem;
+            height: 3rem;
+            padding: 1rem;
+            margin-left: 5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+    <!-- <h3>All Listings</h3> -->
+    <div id="filters">
+        <div class="filter">
+            <div><i class="fa-solid fa-fire"></i></div>
+            <p>Trending</p>
+        </div>
+        <div class="filter">
+            <div><i class="fa-solid fa-basket-shopping"></i></div>
+            <p>Buy</p>
+        </div>
+        <div class="filter">
+            <div><i class="fa-solid fa-rotate"></i></div>
+            <p>Rent</p>
+        </div>
+        <div class="filter">
+            <div><i class="fa-solid fa-shop"></i></div>
+            <p>Sell</p>
+        </div>
+        <div class="filter">
+            <div><i class="fa-solid fa-hand-holding-medical"></i></div>
+            <p>Donate</p>
+        </div>
+        <div class="filter">
+            <div><i class="fa-brands fa-blogger-b"></i></div>
+            <p>Blogs</p>
+        </div>
+        <div class="filter">
+            <div><i class="fa-regular fa-circle-play"></i></div>
+            <p>Tutorial videos</p>
+        </div>
+       
+        <div id="custom-cursor"></div>
+
+        <div  id="daba" class="tax-toggle">
+            <div class="form-check-reverse form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                <label class="form-check-label" for="flexSwitchCheckDefault">Display Total After Taxes</label>
+            </div>
+        </div>
+    </div>
+    <ul>
+
+        <div class="con_blog">
+            <div class="newblog">
+            <div class="head">
+            <a href=""><h3 class="texts">BLOGS</h3></a>
+        </div>
+      <a> <div class="own">
+            <i class="fa-solid fa-circle-plus"></i>
+        </div>
+    </a>
+    </div>
+        <div  class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-3">
+            
+            
+                <a href="" class="listing-link">
+                    <div class="card col listing-card" style="width: 20rem;">
+                        <img  id="boxa" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRwyA2RyWZpnxk8YOMwAhDXkb6vJjXVMwfYw&s">
+                        <div class="card-img-overlay"></div>
+                        <div class="card-body">
+                            <p class="card-text">
+                                <b>
+                                    "Trash to Treasure" 
+                                </b> <br>
+                                <p> Discover creative ways to turn waste into valuable products.</p>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="" class="listing-link">
+                    <div class="card col listing-card" style="width: 20rem;">
+                        <img id="boxa" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRwyA2RyWZpnxk8YOMwAhDXkb6vJjXVMwfYw&s">
+                        <div class="card-img-overlay"></div>
+                        <div class="card-body">
+                            <p class="card-text">
+                                <b>
+                                    "Trash to Treasure" 
+                                </b> <br>
+                                <p> Discover creative ways to turn waste into valuable products.</p>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="" class="listing-link">
+                    <div class="card col listing-card" style="width: 20rem;">
+                        <img id="boxa" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRwyA2RyWZpnxk8YOMwAhDXkb6vJjXVMwfYw&s">
+                        <div class="card-img-overlay"></div>
+                        <div class="card-body">
+                            <p class="card-text">
+                                <b>
+                                    "Trash to Treasure" 
+                                </b> <br>
+                                <p> Discover creative ways to turn waste into valuable products.</p>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+
+                
+               
+        </div>
+    </div>
+    </ul>
+</body>
+
+<script>
+    let taxSwitch = document.getElementById("flexSwitchCheckDefault");
+    taxSwitch.addEventListener("click", () => {
+        let taxinfo=document.getElementsByClassName("tax-info");
+        for(info of taxinfo){
+            if(info.style.display!="inline"){
+            info.style.display="inline";
+            }else{
+                info.style.display="none";
+            }
+        }
+    })
+
+   
+document.addEventListener("mousemove", (e) => {
+const cursor = document.getElementById("custom-cursor");
+cursor.style.left = `${e.pageX}px`;
+cursor.style.top = `${e.pageY}px`;
+});
+
+document.querySelectorAll("a, button").forEach(element => {
+element.addEventListener("mouseover", () => {
+document.getElementById("custom-cursor").style.transform = "scale(2.5)";
+});
+element.addEventListener("mouseleave", () => {
+document.getElementById("custom-cursor").style.transform = "scale(1.5)";
+});
+});
+
+
+
+</script>
